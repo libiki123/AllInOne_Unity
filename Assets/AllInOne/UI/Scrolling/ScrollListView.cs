@@ -3,9 +3,9 @@ using UnityEngine;
 public class ScrollListView : MonoBehaviour
 {
     [SerializeField] private RectTransform _contentContainer;
-    [SerializeField] private ScrollItem _itemPrefab;
+    [SerializeField] private ScrollItemView _itemPrefab;
 
-    private ScrollItem _currentSelectedItem;
+    private ScrollItemView _currentSelectedItem;
 
     public void CreateItem(SimpleScrollItemModel data)
     {
@@ -14,7 +14,7 @@ public class ScrollListView : MonoBehaviour
         newItem.Init(this, data.Title, data.Color);
     }
 
-    public void OnItemClick(ScrollItem item)
+    public void OnItemClick(ScrollItemView item)
     {
         if (_currentSelectedItem != null)
         {
